@@ -1,3 +1,6 @@
+// import our custom created module
+import { SampleAngularModule } from 'a2-test-module';
+
 // angular
 import { NgModule } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
@@ -70,6 +73,7 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
 
 @NgModule({
   imports: [
+    SampleAngularModule,
     BrowserModule,
     CoreModule.forRoot([
       { provide: WindowService, useFactory: (win) },
